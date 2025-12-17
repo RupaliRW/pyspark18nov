@@ -4,7 +4,7 @@ import sys
 spark = SparkSession.builder.appName("RDDWordCountFromFile").getOrCreate()
 sc = spark.sparkContext
 
-rdd = sc.textFile(sys.argv[0])
+rdd = sc.textFile(sys.argv[1])
 
 word_count = (
     rdd.flatMap(lambda line: line.split(" "))
