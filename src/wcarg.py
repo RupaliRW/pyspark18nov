@@ -15,4 +15,5 @@ word_count = (
 
 for w in word_count.collect():
     print(w)
+print("end")
 
